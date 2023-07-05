@@ -1,0 +1,21 @@
+{% extends "base.html" %}
+
+{% block main %}
+<h3>A Sample Web Application</h3>
+<br>
+<div class="container" style="max-width: 500px">
+    <p style="max-width: 1000px"></p>This sample application is just used to test cloud capabilities.</p>
+    <form action="/index" method="POST">
+        <!-- Protect form -->
+        {{ form.csrf_token() }}
+        <div class="form-group">
+            <label for="user_name">{{ form.user_name.label }}</label>
+            {{ form.user_name(class_="form-control") }}
+        </div>
+        <div class="form-group" style="float:right">
+            <br>
+            {{ form.submit(class_="btn-default") }}
+        </div>
+    </form>
+</div>
+{% endblock %}
