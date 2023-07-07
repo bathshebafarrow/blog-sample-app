@@ -13,5 +13,5 @@ This is a very simple Python Flask application used for basic testing of public 
 
 ## To create a docker image:
 
-1. Docker command
+1. Run the docker build command
   * docker build -t sample-app .
